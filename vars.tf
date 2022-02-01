@@ -19,7 +19,7 @@ variable "JENKINS_VERSION" {
 }
 
 variable "TERRAFORM_VERSION" {
-  default = "0.12.23"
+  default = "1.1.4"
 }
 
 variable "APP_INSTANCE_COUNT" {
@@ -33,9 +33,11 @@ variable "DUMMY_SSH_PUB_KEY" {
 
 variable "access_key" {
   type = string
+  default = "${ACCESS_KEY}"
 }
 
 variable "secret_key" {
   type = string
+  default = "${SECRET_KEY}"
 }
 
