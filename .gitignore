@@ -1,0 +1,4 @@
+/.terraform*
+/terraform*
+vars.tfvars
+backend.conf
