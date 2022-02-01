@@ -5,7 +5,7 @@ AWS_REGION="us-east-1"
 
 ARTIFACT=`packer build -machine-readable ./packer-demo/packer-demo.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
 echo "packer output:"
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AMI ID: ${AMI_ID}"
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AMI ID: ${ARTIFACT}"
 cat ./packer-demo/packer-demo.json
 
 AMI_ID=`echo $ARTIFACT | cut -d ':' -f2`
