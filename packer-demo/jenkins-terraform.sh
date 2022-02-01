@@ -2,9 +2,8 @@
 set -ex
 
 AWS_REGION="us-east-1"
-
-ARTIFACT=`packer build -machine-readable ./packer-demo/packer-demo.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
-echo "packer output:"
+cd packer-demo
+ARTIFACT=`packer build -machine-readable packer-demo.json | awk -F, '$0 ~/artifact,0,id/ {print $6}'`
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>AMI ID: ${ARTIFACT}"
 cat ./packer-demo/packer-demo.json
 
