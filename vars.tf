@@ -33,11 +33,11 @@ variable "DUMMY_SSH_PUB_KEY" {
 
 variable "access_key" {
   type = string
-  default = "AKIAYEY7H3G7TESHXRC3"
+  default = ""
 }
 
 variable "secret_key" {
   type = string
-  default = "0wpIXQzlsUsIXU97ghE3Fu8h7o4NBAx8X5i6MFh3"
+  default = ""
 }
 
